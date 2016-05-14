@@ -8,8 +8,8 @@ makeCacheMatrix <- function(x = matrix()) {
   imat <- NULL
   
   # matrix get / set functions
-  set <- function(m) 
-  { # replace for new matrix and initialize mean to NULL
+  set <- function(m) { 
+    # replace for new matrix and initialize mean to NULL
     x <<- m
     imat <<- NULL
   }
@@ -31,8 +31,7 @@ cacheSolve <- function(x, ...) {
   
       imat <- x$getInverse()
       # check if the matrix inverse is already cached
-      if ( ! is.null(imat))
-      {
+      if ( ! is.null(imat)) {
         message('return matrix inverse from cache (no computation done)')
         return(imat)
       }
